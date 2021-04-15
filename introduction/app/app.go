@@ -3,10 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	var (
-		userName string
-	)
+	customer := getData(1)
+	fmt.Println(customer)
+}
 
-	fmt.Scan(&userName)
-	fmt.Printf("Wellcome to the GoLang for DevOps cource: %s\n", userName)
+func getData(customerId int) (customer string) {
+	var firstName = "killabayte"
+	lastName := "Gophers"
+
+	fullName := firstName + " " + lastName
+	return fullName
 }
