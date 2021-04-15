@@ -3,20 +3,15 @@ package main
 import "fmt"
 
 func main() {
-	customer := getData(1)
-	fmt.Println(customer)
-
-	//Get the wrong customer
-	customer = getData(3)
-	fmt.Println(customer)
+	customers := getData()
+	fmt.Println(customers)
+	fmt.Println(len(customers))
 }
 
-func getData(customerId int) (customer string) {
-	if customerId == 1 {
-		return "killabayte Yarick"
-	} else if customerId == 2 {
-		return "The Mad Hatter"
-	} else {
-		return "User not found"
-	}
+func getData() (customers [2]string) {
+	customer := "killabayte Yarick"
+	customers[0] = customer
+	customers[1] = "The Mad Hatter"
+
+	return customers
 }
