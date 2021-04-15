@@ -11,6 +11,5 @@ func getData(customerId int) (customer string) {
 	var firstName = "killabayte"
 	lastName := "Gophers"
 
-	fullName := firstName + " " + lastName
-	return fullName
+	return firstName + " " + lastName
 }
