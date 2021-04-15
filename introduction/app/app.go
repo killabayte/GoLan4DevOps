@@ -8,10 +8,11 @@ func main() {
 	fmt.Println(len(customers))
 }
 
-func getData() (customers [2]string) {
-	customer := "killabayte Yarick"
-	customers[0] = customer
-	customers[1] = "The Mad Hatter"
+func getData() (customers []string) {
+	customers = []string{"killabayte", "The Mad Hatter"}
+	customers = append(customers, "Alice")
+	customers = append(customers, "March Hare")
+	customers = append(customers, "Dormouse")
 
 	return customers
 }
